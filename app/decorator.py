@@ -14,7 +14,10 @@ def repeater(call_count, start_sleep_time, factor, border_sleep_time):
             for number in range(call_count):
                 timer = start_sleep_time * factor ** number
                 timer = min(timer, border_sleep_time)
-                print(f"Запуск номер {number + 1}Ожидание: {timer} секунд.", end=" ")
+                print(f"Запуск номер {number + 1}\
+                    Ожидание: {timer} секунд.",
+                      end=" "
+                      )
                 time.sleep(timer)
                 func_result = fnc()
                 print(f"Результат декорируемой функций = {func_result}.")
